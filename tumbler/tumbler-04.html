@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RIPPLE - 텀블러 챌린지 참여</title>
+  <meta name="description" content="텀블러 챌린지 후기" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard/dist/web/static/pretendard.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="bg-[#0b0c0e] text-white font-sans antialiased">
+
+<header class="header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo">
+      <img src="../assets/logo.png" alt="RIPPLE" class="logo-img">
+    </a>
+    <nav class="nav">
+      <a href="../index.html">HOME</a>
+      <a href="../about.html">ABOUT</a>
+      <a href="../guide.html">GUIDE</a>
+      <a href="../experience.html">EXPERIENCE</a>
+    </nav>
+  </div>
+</header>
+
+<main class="experience exp-detail01-page">
+  <div class="experience-inner">
+    <h2 class="experience-title breadcrumb" aria-label="breadcrumb">
+      <a href="../experience.html" class="crumb is-root">library</a>
+      <span class="sep" aria-hidden="true">›</span>
+      <a href="../exp-detail-tumbler.html" class="crumb is-muted">텀블러 챌린지</a>
+      <span class="sep" aria-hidden="true">›</span>
+      <span class="crumb is-muted">텀블러 챌린지 참여</span>
+    </h2>
+
+    <div class="experience-heading">
+      <h3 class="experience-title-main">텀블러 챌린지 참여</h3>
+      <hr class="experience-divider">
+    </div>
+
+    <section class="exp01_01">
+      <div class="exp01_01-hero">
+        <img src="../tumblerimg/04.png" alt="텀블러 챌린지" style="display: block;">
+        <div>
+          카페에서 일회용 컵 NO! 텀블러 사용으로 작은 실천을 이어갑니다.
+        </div>
+      </div>
+      <div class="exp01_01-log">
+        <div class="log-item">
+          <span class="log-date" id="postDate"></span>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-col brand-col">
+      <div class="brand">
+        <img src="../assets/logo.png" alt="RIPPLE 로고" class="ripple-logo-footer"> 
+      </div>
+      <p class="brand-sub">더 나은 세상을 위한 제안</p>
+      <div class="socials">
+        <a class="social" href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+        <a class="social" href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+        <a class="social" href="#" aria-label="X"><i class="ri-twitter-x-line"></i></a>
+        <a class="social" href="#" aria-label="Email"><i class="ri-mail-line"></i></a>
+      </div>
+      <p class="legal">© 2025 RIPPLE. All rights reserved. contact@rpl.app</p>
+    </div>
+    <div class="footer-right">
+      <ul class="links-list">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#guide">GUIDE</a></li>
+        <li><a href="#experience">EXPERIENCE</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const t = new Date();
+    const y = t.getFullYear();
+    const m = String(t.getMonth() + 1).padStart(2, '0');
+    const d = String(t.getDate()).padStart(2, '0');
+    document.getElementById('postDate').textContent = `${y}-${m}-${d}`;
+  });
+</script>
+</body>
+</html>
+
+
