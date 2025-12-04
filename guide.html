@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RIPPLE</title>
+  <meta name="description" content="작은 실천이 연결되는 친환경 플랫폼, RIPPLE" />
+  <!-- Pretendard CDN -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard/dist/web/static/pretendard.css" />
+  <!-- Remixicon for icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Tailwind via CDN -->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Pretendard', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            brand: {
+              50: '#e9faff',
+              100: '#c9faff',
+              200: '#a7f0ff',
+              400: '#6be0ff',
+              500: '#39c9ff',
+              600: '#12a6e6'
+            },
+            ink: '#0f1115'
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(0,0,0,0.25)'
+          }
+        }
+      }
+    } 
+  </script>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="guide-page text-white font-sans antialiased">
+
+<!-- Header -->
+<header class="header">
+  <div class="header-inner">
+    <a href="./index.html" class="logo">
+      <img src="./assets/logo.png" alt="RIPPLE" class="logo-img">
+    </a>
+    <nav class="nav">
+      <a href="./index.html">HOME</a>
+      <a href="./about.html">ABOUT</a>
+      <a href="./guide.html">GUIDE</a>
+      <a href="./experience.html">EXPERIENCE</a>
+    </nav>
+    <button id="menuBtn" class="menu-btn" aria-label="메뉴 열기">☰</button>
+  </div>
+  <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+    <a href="./index.html">HOME</a>
+    <a href="./about.html">ABOUT</a>
+    <a href="./guide.html">GUIDE</a>
+    <a href="./experience.html">EXPERIENCE</a>
+  </div>
+</header>
+
+<!--점선-->
+<img src="./assets/center-dotted.svg" alt="" class="dotted-path" aria-hidden="true">
+
+<!-- Guide Hero -->
+<section id="guide" class="guide-hero">
+  <!-- 왼쪽 이미지 -->
+  <img src="./assets/guide_left.png" alt="핑크 이미지" class="guide-left">
+
+  <!-- 중앙 컨텐츠 -->
+  <div class="guide-center">
+    <img src="./assets/guidelogo.png" alt="RIPPLE 로고" class="guide-logo">
+    <a href="#experience" class="guide-btn">체험하기</a>
+  </div>
+
+  <!-- 오른쪽 이미지 -->
+  <img src="./assets/guide_right.png" alt="형광 이미지" class="guide-right">
+</section>
+
+<section class="process-step step-1">
+  <div class="step-inner">
+
+<h2 class="step-title">
+  <span class="logo-inline">
+    <img src="./assets/logo_black.png" alt="RIPPLE 로고" class="ripple-word">은
+  </span><br>
+  <span>어떤 식으로 진행되나요?</span>
+</h2>
+
+
+<!-- 이미지 + 라벨 + 설명문 묶음 -->
+<div class="step-visual">
+      <img src="./assets/guide_trash.png" alt="쓰레기통 이미지" class="step-img">
+      <div class="step-label">친환경 활동하기</div>
+      <p class="step-desc">
+        일상 속에서 할 수 있는 작은 실천을 시작하세요.<br>
+        텀블러 사용, 리필 용기 채우기, 플로깅처럼<br>
+        누구나 쉽게 참여할 수 있는 친환경 행동이 RIPPLE의 출발점입니다.
+      </p>
+    </div>
+  </div>
+</section>
+<!--Ai섹션-->
+<section class="ai-cert step-visual">
+  <div class="ai-text">
+    <div class="step-label_2">Ai로 인증하기</div>
+    <p class="step-desc_2">
+      AI 인식 기능을 통해 같은 제품을 반복해서 사용해서<br>
+      텀블러, 리필 용기 사용이 인증됩니다.
+    </p>
+    <img src="./assets/guide2.png" alt="텀블러 이미지" class="tumbler-img">
+  </div>
+  <div class="ai-visual">
+    <!-- 폭죽 (건드리지 않음) -->
+    <img src="./assets/ai.png" alt="폭죽 이미지" class="explosion-img">
+  </div>
+</section>
+<!--3-->
+<section class="guide3 step-visual">
+  <div class="guide3-inner">
+    <div class="guide3-left">
+      <img src="./assets/guide_3.png" alt="폭죽 이미지" class="guide3-fireworks">
+    </div>
+
+    <div class="guide3-center">
+      <h2 class="guide3-title">공유하기 & 연결하기</h2>
+      <p class="guide3-desc">
+        완료한 실천은 피드에 기록됩니다. 다른 사람과 경험을 나눌 수 있습니다.<br>
+        다른 사용자가 남긴 실천에 "같이하기" 버튼으로 참여해요!
+      </p>
+      <img src="./assets/guide'3.png" alt="말풍선 이미지" class="guide3-speech">
+    </div>
+  </div>
+</section>
+
+<!--4-->
+<section class="guide4 step-visual">
+  <div class="guide4-inner">
+    <div class="g4-text">
+      <h2 class="g4-title">기부하기</h2>
+      <p class="g4-desc">
+        모인 실천이 일정 목표를 달성하면, 파트너 기업이 ESG 기부를 실행합니다.
+        <br>사용자는 자신의 행동이 만들어낸 사회적 변화를 직접 확인할 수 있습니다.
+      </p>
+    </div>
+
+    <div class="g4-visual">
+      <!-- 오른쪽 비주얼: 장식까지 포함된 단일 이미지 -->
+      <img src="./assets/guide4.png" alt="저금통 기부 비주얼" class="g4-img">
+    </div>
+  </div>
+</section>
+<!--5-->
+<section class="guide5 step-visual">
+  <div class="guide5-box">
+    <h2 class="g5-title">친환경 공유하기</h2>
+    <a href="./experience.html" class="g5-btn">지금 시작하기</a>
+  </div>
+</section>
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-col brand-col">
+      <div class="brand">
+        <img src="./assets/logo.png" alt="RIPPLE 로고" class="ripple-logo-footer"> 
+      </div>
+      <p class="brand-sub">더 나은 세상을 위한 제안</p>
+      <div class="socials">
+        <a class="social" href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+        <a class="social" href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+        <a class="social" href="#" aria-label="X"><i class="ri-twitter-x-line"></i></a>
+        <a class="social" href="#" aria-label="Email"><i class="ri-mail-line"></i></a>
+      </div>
+      <p class="legal">© 2025 RIPPLE. All rights reserved. contact@rpl.app</p>
+    </div>
+
+ <!-- 오른쪽: 메뉴 -->
+    <div class="footer-right">
+      <ul class="links-list">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#guide">GUIDE</a></li>
+        <li><a href="#experience">EXPERIENCE</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

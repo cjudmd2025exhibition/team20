@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RIPPLE</title>
+  <meta name="description" content="작은 실천이 연결되는 친환경 플랫폼, RIPPLE" />
+  <!-- Pretendard CDN -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard/dist/web/static/pretendard.css" />
+  <!-- Remixicon for icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Tailwind via CDN -->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Pretendard', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            brand: {
+              50: '#e9faff',
+              100: '#c9faff',
+              200: '#a7f0ff',
+              400: '#6be0ff',
+              500: '#39c9ff',
+              600: '#12a6e6'
+            },
+            ink: '#0f1115'
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(0,0,0,0.25)'
+          }
+        }
+      }
+    } 
+  </script>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="bg-[#0b0c0e] text-white font-sans antialiased">
+
+<!-- Header -->
+<header class="header">
+  <div class="header-inner">
+    <a href="./index.html" class="logo">
+      <img src="./assets/logo.png" alt="RIPPLE" class="logo-img">
+    </a>
+    <nav class="nav">
+      <a href="./index.html">HOME</a>
+      <a href="./about.html">ABOUT</a>
+      <a href="./guide.html">GUIDE</a>
+      <a href="./experience.html">EXPERIENCE</a>
+    </nav>
+    <button id="menuBtn" class="menu-btn" aria-label="메뉴 열기">☰</button>
+  </div>
+  <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+    <a href="./index.html">HOME</a>
+    <a href="./about.html">ABOUT</a>
+    <a href="./guide.html">GUIDE</a>
+    <a href="./experience.html">EXPERIENCE</a>
+  </div>
+</header>
+<main class="experience exp-detail01-page">
+
+  <div class="experience-inner">
+    <h2 class="experience-title breadcrumb" aria-label="breadcrumb">
+      <a href="./experience.html" class="crumb is-root">library</a>
+      <span class="sep" aria-hidden="true">›</span>
+      <a href="./exp-detail.html" class="crumb is-muted">플로깅</a>
+      <span class="sep" aria-hidden="true">›</span>
+      <span class="crumb is-muted">한강 플로깅 챌린지</span>
+    </h2>
+
+  <!-- 검색창 + 화살표 -->
+<div class="experience-heading">
+  <h3 class="experience-title-main" id="postTitle">가족끼리 다같이 플로깅 하고 왔어요</h3>
+  <hr class="experience-divider">
+</div>
+
+    <section class="exp01_01">
+  <!-- 상단 대표 이미지 또는 본문 -->
+  <div class="exp01_01-hero" id="postImageContainer">
+    <img id="postImage" src="./assets/exp01.jpg" alt="플로깅 대표 이미지" style="display: none;">
+    <div id="postContent" style="display: none;">
+      한강 플로깅 챌린지 참여했어요
+    </div>
+  </div>
+
+  <!-- 활동 로그 리스트 -->
+  <div class="exp01_01-log">
+    <div class="log-item">
+      <span class="log-date" id="postDate"></span>
+      <button id="deletePost" class="delete-btn" style="display: none;" aria-label="글 삭제">
+        <i class="ri-delete-bin-line"></i>
+      </button>
+    </div>
+  </div>
+</section>
+</main>
+
+
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-col brand-col">
+      <div class="brand">
+        <img src="./assets/logo.png" alt="RIPPLE 로고" class="ripple-logo-footer"> 
+      </div>
+      <p class="brand-sub">더 나은 세상을 위한 제안</p>
+      <div class="socials">
+        <a class="social" href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+        <a class="social" href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+        <a class="social" href="#" aria-label="X"><i class="ri-twitter-x-line"></i></a>
+        <a class="social" href="#" aria-label="Email"><i class="ri-mail-line"></i></a>
+      </div>
+      <p class="legal">© 2025 RIPPLE. All rights reserved. contact@rpl.app</p>
+    </div>
+
+ <!-- 오른쪽: 메뉴 -->
+    <div class="footer-right">
+      <ul class="links-list">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#guide">GUIDE</a></li>
+        <li><a href="#experience">EXPERIENCE</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+  <script src="./script.js"></script>
+  <script>
+    // 페이지 로드 시 localStorage에서 선택된 게시물 불러오기
+    document.addEventListener('DOMContentLoaded', function() {
+      // 먼저 오늘 날짜 설정
+      setTodayDate();
+      
+      // 그 다음 게시물 로드 (날짜를 덮어쓸 수 있음)
+      loadSelectedPost();
+      
+      // 마지막에 삭제 버튼 설정
+      setupDeleteButton();
+    });
+
+    function setTodayDate() {
+      const today = new Date();
+      const year = today.getFullYear();
+      const month = String(today.getMonth() + 1).padStart(2, '0');
+      const day = String(today.getDate()).padStart(2, '0');
+      const todayString = `${year}-${month}-${day}`;
+      
+      const dateElement = document.getElementById('postDate');
+      console.log('Date element:', dateElement);
+      if (dateElement) {
+        dateElement.textContent = todayString;
+        console.log('Date set to:', todayString);
+      } else {
+        console.log('Date element not found');
+      }
+    }
+
+    function loadSelectedPost() {
+      const params = new URLSearchParams(location.search);
+      const type = (params.get('type') || 'plogging').toLowerCase();
+      const storageKey = `${type}Posts`;
+      const queryId = params.get('id');
+      const selectedPostId = queryId || localStorage.getItem('selectedPostId');
+      
+      // 날짜 요소 가져오기
+      const dateElement = document.getElementById('postDate');
+      
+      if (selectedPostId) {
+        const posts = JSON.parse(localStorage.getItem(storageKey) || '[]');
+        const selectedPost = posts.find(post => post.id.toString() === selectedPostId);
+        
+        if (selectedPost) {
+          // 제목 표시
+          const titleElement = document.getElementById('postTitle');
+          if (titleElement) {
+            titleElement.textContent = selectedPost.title;
+          }
+          
+          // 본문 표시
+          const contentElement = document.getElementById('postContent');
+          if (contentElement) {
+            contentElement.textContent = selectedPost.content;
+          }
+          
+          // 날짜 표시 (게시물에 저장된 날짜가 있으면 사용)
+          if (dateElement) {
+            if (selectedPost.timestamp && selectedPost.timestamp.length > 5) {
+              // timestamp가 유효한 경우만 사용
+              const dateOnly = selectedPost.timestamp.split(' ')[0];
+              if (dateOnly && dateOnly.length > 5) {
+                dateElement.textContent = dateOnly;
+                console.log('Post date set to:', dateOnly);
+              } else {
+                setTodayDate();
+              }
+            } else {
+              // timestamp가 없거나 유효하지 않으면 오늘 날짜로 설정
+              setTodayDate();
+            }
+          }
+          
+          // 이미지 또는 본문 표시
+          const imageContainer = document.getElementById('postImageContainer');
+          const postImage = document.getElementById('postImage');
+          const postContent = document.getElementById('postContent');
+          
+          if (selectedPost.image) {
+            // 이미지가 있으면 이미지와 본문 모두 표시
+            if (postImage) {
+              postImage.src = selectedPost.image;
+              postImage.style.display = 'block';
+            }
+            if (postContent) {
+              postContent.style.display = 'block';
+            }
+          } else {
+            // 이미지가 없으면 본문만 표시
+            if (postImage) {
+              postImage.style.display = 'none';
+            }
+            if (postContent) {
+              postContent.style.display = 'block';
+            }
+          }
+        } else {
+          // selectedPost가 없으면 오늘 날짜로 설정
+          if (dateElement && !dateElement.textContent) {
+            setTodayDate();
+          }
+        }
+      } else {
+        // selectedPostId가 없으면 오늘 날짜로 설정
+        if (dateElement && !dateElement.textContent) {
+          setTodayDate();
+        }
+      }
+    }
+
+    function setupDeleteButton() {
+      const deleteBtn = document.getElementById('deletePost');
+      const params = new URLSearchParams(location.search);
+      const selectedPostId = params.get('id') || localStorage.getItem('selectedPostId');
+      
+      if (deleteBtn && selectedPostId) {
+        // 삭제 버튼 표시
+        deleteBtn.style.display = 'inline-block';
+        
+        // 삭제 버튼 클릭 이벤트
+        deleteBtn.addEventListener('click', function() {
+          if (confirm('정말로 이 글을 삭제하시겠습니까?')) {
+            deletePost(selectedPostId);
+          }
+        });
+      }
+    }
+
+    function deletePost(postId) {
+      const params = new URLSearchParams(location.search);
+      const type = (params.get('type') || 'plogging').toLowerCase();
+      const storageKey = `${type}Posts`;
+      const redirectMap = {
+        plogging: './exp-detail.html',
+        tumbler: './exp-detail-tumbler.html',
+        bus: './exp-detail-bus.html',
+        fork: './exp-detail-fork.html',
+        reuse: './exp-detail-reuse.html'
+      };
+      const redirectUrl = redirectMap[type] || './exp-detail.html';
+
+      const posts = JSON.parse(localStorage.getItem(storageKey) || '[]');
+      const updatedPosts = posts.filter(post => post.id.toString() !== postId);
+      localStorage.setItem(storageKey, JSON.stringify(updatedPosts));
+      
+      // 선택된 게시물 ID 제거
+      localStorage.removeItem('selectedPostId');
+      
+      alert('글이 삭제되었습니다.');
+      
+      // 카테고리별 목록으로 이동
+      window.location.href = redirectUrl;
+    }
+  </script>
+</body>
+</html>

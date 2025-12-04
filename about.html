@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RIPPLE</title>
+  <meta name="description" content="작은 실천이 연결되는 친환경 플랫폼, RIPPLE" />
+  <!-- Pretendard CDN -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard/dist/web/static/pretendard.css" />
+  <!-- Remixicon for icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Tailwind via CDN -->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Pretendard', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            brand: {
+              50: '#e9faff',
+              100: '#c9faff',
+              200: '#a7f0ff',
+              400: '#6be0ff',
+              500: '#39c9ff',
+              600: '#12a6e6'
+            },
+            ink: '#0f1115'
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(0,0,0,0.25)'
+          }
+        }
+      }
+    } 
+  </script>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="bg-[#0b0c0e] text-white font-sans antialiased">
+
+<!-- Header -->
+<header class="header">
+  <div class="header-inner">
+    <a href="./index.html" class="logo">
+      <img src="./assets/logo.png" alt="RIPPLE" class="logo-img">
+    </a>
+    <nav class="nav">
+      <a href="./index.html">HOME</a>
+      <a href="./about.html">ABOUT</a>
+      <a href="./guide.html">GUIDE</a>
+      <a href="./experience.html">EXPERIENCE</a>
+    </nav>
+    <button id="menuBtn" class="menu-btn" aria-label="메뉴 열기">☰</button>
+  </div>
+  <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+    <a href="./index.html">HOME</a>
+    <a href="./about.html">ABOUT</a>
+    <a href="./guide.html">GUIDE</a>
+    <a href="./experience.html">EXPERIENCE</a>
+  </div>
+</header>
+
+<!-- About Hero-->
+<section class="about-hero">
+  <div class="about-text">
+    <h1>
+      <span class="hl">작은실천🌱</span> 이라도 함께 이어지면<br>
+      세상이 달라진다는 믿음🤝,<br>
+      <span class="hl">RIPPLE 💬</span>이 존재하는 이유입니다.
+    </h1>
+  </div>
+
+<!-- 장식 그래픽 -->
+  <div class="about-graphic" aria-hidden="true">
+    <img src="./assets/about.png" alt="">
+  </div>
+
+<!-- 화살표 -->
+<div class="scroll-down" id="scrollBtn">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="6 9 12 15 18 9"></polyline>
+  </svg>
+</div>
+</section>
+
+<!--어바웃내용-->
+<!-- RIPPLE의 시작 -->
+<section class="about-start" id="aboutStart">
+  <div class="about-inner">
+    <!-- 왼쪽 텍스트 -->
+    <div class="about-left">
+        <h2>
+        <span class="title-inline">
+            <img src="./assets/logo_black.png" alt="RIPPLE 로고" class="ripple-logo">의
+        </span>
+        <br>
+        시작
+        </h2>
+    </div>
+
+    <!-- 오른쪽 장식 이미지 -->
+    <div class="about-graphic-trash">
+    <img src="./assets/deco-trash.png" alt="쓰레기 그래픽">
+    </div>
+</section>
+
+<!--about3 -->
+<section class="about3">
+  <div class="about3-wrap">
+    <!-- 왼쪽 이미지 -->
+    <div class="about3-left">
+      <img src="./assets/about3.png" alt="에코 아이템 모음">
+    </div>
+
+    <!-- 오른쪽 텍스트 -->
+    <div class="about3-right">
+    <p class="lead">
+        우리 일상에 스며든<br>
+        환경 문제를 바꾸기 위해 우리는<br>
+        어떤 실천을 이어가야 할까요?
+    </p>
+
+    <p class="body">
+        Ripple은 <span class="hl3 hl3-green">‘작은 행동’</span>과<br>
+        <span class="hl3 hl3-pink">‘함께하는 연결’</span>을 이어, 더<br>
+        나은 변화를 만들어갑니다.
+    </p>
+
+    <p class="tail">
+        ‘작은 실천’의 가치를 확산시키고,<br>
+        ‘같이하기’의 가능성을 상상하며,<br>
+        지속가능한 삶의 새로운 기준을 제안합니다.
+    </p>
+    </div>
+  </div>
+</section>
+
+<!--ABOUT4-->
+<section class="about4">
+  <h3 class="about4-title">
+    그래서 우리는, 실천이 연결되고 이어지는<br>
+    커뮤니티를 만들었습니다.
+  </h3>
+
+  <!-- 1줄: 왼쪽으로 -->
+  <div class="about4-row" data-dir="left">
+    <div class="about4-track">
+      <span class="about4-pill">💖</span>
+      <span class="about4-pill">텀블러</span>
+      <span class="about4-pill">🌍</span>
+      <span class="about4-pill">플로깅</span>
+      <span class="about4-pill">텀블러</span>
+      <span class="about4-pill">✨</span>
+      <span class="about4-pill">수저 포크 안주셔도 돼요!</span>
+      <span class="about4-pill">텀블러</span>
+
+      <!-- 무한루프 복제 -->
+      <span class="about4-pill">💖</span>
+      <span class="about4-pill">텀블러</span>
+      <span class="about4-pill">🌍</span>
+      <span class="about4-pill">플로깅</span>
+      <span class="about4-pill">텀블러</span>
+      <span class="about4-pill">✨</span>
+      <span class="about4-pill">수저 포크 안주셔도 돼요!</span>
+      <span class="about4-pill">텀블러</span>
+
+      <!-- 추가 복제 세트 (1920px에서도 끊김 방지) -->
+      <span class="about4-pill">💖</span>
+      <span class="about4-pill">텀블러</span>
+      <span class="about4-pill">🌍</span>
+      <span class="about4-pill">플로깅</span>
+      <span class="about4-pill">텀블러</span>
+      <span class="about4-pill">✨</span>
+      <span class="about4-pill">수저 포크 안주셔도 돼요!</span>
+      <span class="about4-pill">텀블러</span>
+
+      <!-- 추가 복제 세트 (완전한 무한반복) -->
+      <span class="about4-pill">💖</span>
+      <span class="about4-pill">텀블러</span>
+      <span class="about4-pill">🌍</span>
+      <span class="about4-pill">플로깅</span>
+      <span class="about4-pill">텀블러</span>
+      <span class="about4-pill">✨</span>
+      <span class="about4-pill">수저 포크 안주셔도 돼요!</span>
+      <span class="about4-pill">텀블러</span>
+    </div>
+  </div>
+
+  <!-- 2줄: 오른쪽으로 -->
+  <div class="about4-row" data-dir="right">
+    <div class="about4-track">
+      <span class="about4-pill">포장</span>
+      <span class="about4-pill">다회용기 포장</span>
+      <span class="about4-pill">🪽</span>
+      <span class="about4-pill">대중교통 이용하고 포인트 받기</span>
+      <span class="about4-pill">대중교통 이용하고 포인트 받기</span>
+
+      <!-- 복제 -->
+      <span class="about4-pill">포장</span>
+      <span class="about4-pill">다회용기 포장</span>
+      <span class="about4-pill">🪽</span>
+      <span class="about4-pill">대중교통 이용하고 포인트 받기</span>
+      <span class="about4-pill">대중교통 이용하고 포인트 받기</span>
+
+      <!-- 추가 복제 세트 (1920px에서도 끊김 방지) -->
+      <span class="about4-pill">포장</span>
+      <span class="about4-pill">다회용기 포장</span>
+      <span class="about4-pill">🪽</span>
+      <span class="about4-pill">대중교통 이용하고 포인트 받기</span>
+      <span class="about4-pill">대중교통 이용하고 포인트 받기</span>
+
+      <!-- 추가 복제 세트 (완전한 무한반복) -->
+      <span class="about4-pill">포장</span>
+      <span class="about4-pill">다회용기 포장</span>
+      <span class="about4-pill">🪽</span>
+      <span class="about4-pill">대중교통 이용하고 포인트 받기</span>
+      <span class="about4-pill">대중교통 이용하고 포인트 받기</span>
+    </div>
+  </div>
+</section>
+
+<section id="about5" class="about5" aria-labelledby="about5-title">
+  <!-- 타이틀: 상단 중앙 정렬 -->
+<h2 id="about5-title" class="about5__title">
+  <img src="./assets/logo_black.png" alt="RIPPLE 로고" class="about5__logo">
+  이 추구하는<br>핵심 가치 3가지
+</h2>
+
+  <div class="about5__inner">
+    <!-- 좌측: 아코디언 -->
+    <div class="about5__left">
+      <div class="a5-acc" role="tablist" aria-label="핵심 가치 목록">
+        <!-- 1: 기본 오픈 / 라임 -->
+        <article class="a5-acc__item is-open"
+                 data-color="#D7FF3F"
+                 data-img="assets/value-1.png">
+          <h3 class="a5-acc__head" role="tab" aria-expanded="true">
+            <button type="button" class="a5-acc__toggle" data-acc>
+              <span class="a5-acc__label is-active">작은 실천</span>
+            </button>
+          </h3>
+          <p class="a5-acc__sub">Small Action</p>
+          <div class="a5-acc__panel" role="region">
+            <p>
+              거대한 변화를 위해 필요한 것은 특별한 행동이 아니라 일상의 작은 습관입니다.
+              텀블러를 사용하는 일, 쓰레기를 줍는 일, 리필 용기를 채우는 일처럼 소소한 실천이
+              모여 변화를 시작합니다.
+            </p>
+          </div>
+        </article>
+
+        <!-- 2: 핑크 -->
+        <article class="a5-acc__item"
+                 data-color="#FF9BD4"
+                 data-img="assets/value-2.png">
+          <h3 class="a5-acc__head" role="tab" aria-expanded="false">
+            <button type="button" class="a5-acc__toggle" data-acc>
+              <span class="a5-acc__label">연결과 확산</span>
+            </button>
+          </h3>
+          <p class="a5-acc__sub">Connection & Ripple Effect</p>
+          <div class="a5-acc__panel" role="region" hidden>
+            <p>
+              나의 실천은 다른 사람의 참여로 이어지고, 하나의 행동이 또 다른 행동을 불러옵니다.
+              연결이 늘수록 작은 파동은 물결이 됩니다.
+            </p>
+          </div>
+        </article>
+
+        <!-- 3: 블루 -->
+        <article class="a5-acc__item"
+                 data-color="#BED9FF"
+                 data-img="assets/value-3.png">
+          <h3 class="a5-acc__head" role="tab" aria-expanded="false">
+            <button type="button" class="a5-acc__toggle" data-acc>
+              <span class="a5-acc__label">실질적 영향</span>
+            </button>
+          </h3>
+                    <p class="a5-acc__sub">Real Impact</p>
+          <div class="a5-acc__panel" role="region" hidden>
+            <p>
+              모인 실천은 기부와 현장 활동으로 전환되어 구체적인 변화를 만듭니다.
+              사용자는 그 영향을 직접 확인합니다.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- 우측: 이미지 카드 -->
+    <figure class="about5__figure" aria-hidden="true">
+      <img src="assets/value-1.png" alt="" />
+    </figure>
+  </div>
+</section>
+
+<!--about6-->
+<section id="about6" class="about6">
+  <!-- 배경 이미지 -->
+  <img src="assets/bg-trash.png" alt="" class="about6__bg" />
+
+  <!-- 가운데 카드 -->
+  <div class="about6__overlay">
+    <div class="about6__card">
+      <h2 class="about6__title">이제, 당신의 실천을 공유할 차례입니다.</h2>
+      <a href="./guide.html" class="about6__btn">지금 시작하기</a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-col brand-col">
+      <div class="brand">
+        <img src="./assets/logo.png" alt="RIPPLE 로고" class="ripple-logo-footer"> 
+      </div>
+      <p class="brand-sub">더 나은 세상을 위한 제안</p>
+      <div class="socials">
+        <a class="social" href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+        <a class="social" href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+        <a class="social" href="#" aria-label="X"><i class="ri-twitter-x-line"></i></a>
+        <a class="social" href="#" aria-label="Email"><i class="ri-mail-line"></i></a>
+      </div>
+      <p class="legal">© 2025 RIPPLE. All rights reserved. contact@rpl.app</p>
+    </div>
+
+ <!-- 오른쪽: 메뉴 -->
+    <div class="footer-right">
+      <ul class="links-list">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#guide">GUIDE</a></li>
+        <li><a href="#experience">EXPERIENCE</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RIPPLE</title>
+  <meta name="description" content="작은 실천이 연결되는 친환경 플랫폼, RIPPLE" />
+  <!-- Pretendard CDN -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard/dist/web/static/pretendard.css" />
+  <!-- Remixicon for icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Tailwind via CDN -->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Pretendard', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            brand: {
+              50: '#e9faff',
+              100: '#c9faff',
+              200: '#a7f0ff',
+              400: '#6be0ff',
+              500: '#39c9ff',
+              600: '#12a6e6'
+            },
+            ink: '#0f1115'
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(0,0,0,0.25)'
+          }
+        }
+      }
+    } 
+  </script>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="experience-page text-white font-sans antialiased">
+
+<!-- Header -->
+<header class="header">
+  <div class="header-inner">
+    <a href="./index.html" class="logo">
+      <img src="./assets/logo.png" alt="RIPPLE" class="logo-img">
+    </a>
+    <nav class="nav">
+      <a href="./index.html">HOME</a>
+      <a href="./about.html">ABOUT</a>
+      <a href="./guide.html">GUIDE</a>
+      <a href="./experience.html">EXPERIENCE</a>
+    </nav>
+    <button id="menuBtn" class="menu-btn" aria-label="메뉴 열기">☰</button>
+  </div>
+  <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+    <a href="./index.html">HOME</a>
+    <a href="./about.html">ABOUT</a>
+    <a href="./guide.html">GUIDE</a>
+    <a href="./experience.html">EXPERIENCE</a>
+  </div>
+</header>
+<main class="experience exp01-share-page">
+
+  <div class="experience-inner">
+    <h2 class="experience-title breadcrumb" aria-label="breadcrumb">
+      <a href="./experience.html" class="crumb is-root">library</a>
+      <span class="sep" aria-hidden="true">›</span>
+      <a id="crumbCategory" href="./exp-detail.html" class="crumb is-muted">플로깅</a>
+      <span class="sep" aria-hidden="true">›</span>
+      <span class="crumb is-muted">같이 참여하기</span>
+    </h2>
+
+<section class="exp01_share">
+  <div class="exp01_share-inner">
+
+    <!-- 상단 입력 바 -->
+    <form class="exp01_share-bar" id="shareForm" action="#" method="post">
+      <input
+        type="text"
+        class="exp01_share-field"
+        id="activityTitle"
+        placeholder="오늘은 어떤 활동으로 미래를 늘리고 싶나요?"
+        aria-label="활동 입력"
+      />
+      <div class="exp01_share-actions">
+        <input id="share-photo" type="file" accept="image/*" class="sr-only" />
+        <label class="icon-btn" for="share-photo" aria-label="사진 업로드">
+          <i class="ri-camera-line"></i>
+        </label>
+        <button type="submit" class="icon-btn" aria-label="올리기">
+          <i class="ri-arrow-up-line"></i>
+        </button>
+      </div>
+    </form>
+    
+    <!-- 업로드된 이미지 미리보기 -->
+    <div id="imagePreview" class="image-preview" style="display: none;">
+      <img id="previewImg" src="" alt="업로드된 이미지">
+      <button type="button" id="removeImage" class="remove-image-btn">×</button>
+    </div>
+  </div>
+</section>
+<!-- ▼ exp01_share 아래에 붙이기 -->
+<section class="exp01_editor">
+  <div class="exp01_editor-inner">
+    <textarea class="exp01_editor-body" rows="12"
+      placeholder="친환경활동 내용을 작성해주세요."></textarea>
+    <div class="exp01_editor-actions">
+      <input type="text" class="exp01_editor-tags" placeholder="#태그 입력 (쉼표로 구분)">
+      <div class="exp01_editor-buttons">
+        <button class="btn-outline" type="button">임시저장</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-col brand-col">
+      <div class="brand">
+        <img src="./assets/logo.png" alt="RIPPLE 로고" class="ripple-logo-footer"> 
+      </div>
+      <p class="brand-sub">더 나은 세상을 위한 제안</p>
+      <div class="socials">
+        <a class="social" href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+        <a class="social" href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+        <a class="social" href="#" aria-label="X"><i class="ri-twitter-x-line"></i></a>
+        <a class="social" href="#" aria-label="Email"><i class="ri-mail-line"></i></a>
+      </div>
+      <p class="legal">© 2025 RIPPLE. All rights reserved. contact@rpl.app</p>
+    </div>
+
+ <!-- 오른쪽: 메뉴 -->
+    <div class="footer-right">
+      <ul class="links-list">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#guide">GUIDE</a></li>
+        <li><a href="#experience">EXPERIENCE</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+  <script src="./script.js"></script>
+  <script>
+    // 이미지 업로드 및 미리보기
+    const photoInput = document.getElementById('share-photo');
+    const imagePreview = document.getElementById('imagePreview');
+    const previewImg = document.getElementById('previewImg');
+    const removeImageBtn = document.getElementById('removeImage');
+    let selectedImage = null;
+
+    photoInput.addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          selectedImage = e.target.result;
+          previewImg.src = selectedImage;
+          imagePreview.style.display = 'block';
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    removeImageBtn.addEventListener('click', function() {
+      selectedImage = null;
+      imagePreview.style.display = 'none';
+      photoInput.value = '';
+    });
+
+    // 카테고리 파싱 (plogging | tumbler)
+    const params = new URLSearchParams(location.search);
+    const type = (params.get('type') || 'plogging').toLowerCase();
+    const storageKey = `${type}Posts`;
+    const redirectMap = {
+      plogging: './exp-detail.html',
+      tumbler: './exp-detail-tumbler.html',
+      bus: './exp-detail-bus.html',
+      fork: './exp-detail-fork.html',
+      reuse: './exp-detail-reuse.html'
+    };
+    const labelMap = {
+      plogging: '플로깅',
+      tumbler: '텀블러 챌린지',
+      bus: '대중교통 챌린지',
+      fork: '수저포크 챌린지',
+      reuse: '다회용기 챌린지'
+    };
+    const redirectUrl = redirectMap[type] || './exp-detail.html';
+
+    // 브레드크럼 카테고리 링크/텍스트 동기화
+    const crumb = document.getElementById('crumbCategory');
+    if (crumb) {
+      crumb.href = redirectUrl;
+      crumb.textContent = labelMap[type] || '플로깅';
+    }
+
+    // 폼 제출 처리
+    document.getElementById('shareForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const title = document.getElementById('activityTitle').value.trim();
+      const content = document.querySelector('.exp01_editor-body').value.trim();
+      const tags = document.querySelector('.exp01_editor-tags').value.trim();
+      
+      if (!title) {
+        alert('활동 제목을 입력해주세요.');
+        return;
+      }
+      
+      if (!content) {
+        alert('활동 내용을 입력해주세요.');
+        return;
+      }
+
+      // 새 게시물 데이터 생성
+      const newPost = {
+        id: Date.now(),
+        title: title,
+        content: content,
+        tags: tags,
+        image: selectedImage,
+        date: new Date().toISOString(),
+        timestamp: new Date().toLocaleString('ko-KR')
+      };
+
+      // localStorage에 저장 (카테고리별 키 사용)
+      const existingPosts = JSON.parse(localStorage.getItem(storageKey) || '[]');
+      existingPosts.unshift(newPost); // 맨 앞에 추가
+      localStorage.setItem(storageKey, JSON.stringify(existingPosts));
+      
+      console.log('Post saved:', newPost);
+      console.log('All posts:', existingPosts);
+
+      // 성공 메시지
+      alert('게시물이 성공적으로 등록되었습니다!');
+      
+      // 카테고리별 상세 목록으로 이동
+      window.location.href = redirectUrl;
+    });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RIPPLE</title>
+  <meta name="description" content="작은 실천이 연결되는 친환경 플랫폼, RIPPLE" />
+  <!-- Pretendard CDN -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard/dist/web/static/pretendard.css" />
+  <!-- Remixicon for icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Tailwind via CDN -->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Pretendard', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            brand: {
+              50: '#e9faff',
+              100: '#c9faff',
+              200: '#a7f0ff',
+              400: '#6be0ff',
+              500: '#39c9ff',
+              600: '#12a6e6'
+            },
+            ink: '#0f1115'
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(0,0,0,0.25)'
+          }
+        }
+      }
+    } 
+  </script>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="experience-page font-sans antialiased">
+
+<!-- Header -->
+<header class="header">
+  <div class="header-inner">
+    <a href="./index.html" class="logo">
+      <img src="./assets/logo.png" alt="RIPPLE" class="logo-img">
+    </a>
+    <nav class="nav">
+      <a href="./index.html">HOME</a>
+      <a href="./about.html">ABOUT</a>
+      <a href="./guide.html">GUIDE</a>
+      <a href="./experience.html">EXPERIENCE</a>
+    </nav>
+    <button id="menuBtn" class="menu-btn" aria-label="메뉴 열기">☰</button>
+  </div>
+  <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+    <a href="./index.html">HOME</a>
+    <a href="./about.html">ABOUT</a>
+    <a href="./guide.html">GUIDE</a>
+    <a href="./experience.html">EXPERIENCE</a>
+  </div>
+</header>
+<main class="experience">
+
+  <section class="experience-inner">
+    <h2 class="experience-title">library</h2>
+  <!-- 검색창 + 화살표 -->
+  <div class="experience-searchbox">
+    <input type="text" placeholder="검색어를 입력하세요." class="experience-search">
+    <button class="search-arrow" aria-label="맨 위로 이동">
+      <i class="ri-arrow-up-line"></i>
+    </button>
+  </div>
+
+
+    <div class="experience-filter">
+      <button class="btn-active">전체</button>
+      <button>플로깅</button>
+      <button>수저포크 안주셔도 돼요</button>
+      <button>다회용기 포장</button>
+      <button>대중교통 이용하기</button>
+      <button>텀블러 사용</button>
+    </div>
+
+    <div class="experience-list">
+      <!-- 검색 결과 없음 메시지 -->
+      <div class="no-results" style="display: none; text-align: center; padding: 40px; color: #666;">
+        <p>검색 결과가 없습니다.</p>
+        <p>다른 검색어를 시도해보세요.</p>
+      </div>
+
+      <!-- 카드 1 -->
+      <a href="./exp-detail-tumbler.html" class="experience-card-link">
+        <article class="experience-card" id="EXPERIENCEcard01">
+          <div class="card-left">
+            <h3>200명 텀블러 챌린지 #스타벅스</h3>
+            <p class="goal">목표: 200명이 30일 동안 텀블러 3회 사용하기</p>
+            <div class="bar"><div class="fill pink" style="width:73%"></div></div>
+            <p class="status">현재 참여자: <b>140명</b> (73%)</p>
+            <p class="reward">보상: 스타벅스 리워드, 스테인리스 텀블러 30명 추첨</p>
+          </div>
+          <div class="card-right">
+            <img src="./tumblerimg/01.png" alt="텀블러">
+          </div>
+        </article>
+      </a>
+
+      <!-- 카드 2 -->
+      <a href="./exp-detail.html" class="experience-card-link">
+        <article class="experience-card" id="EXPERIENCEcard02">
+          <div class="card-left">
+            <h3>한강 플로깅 챌린지</h3>
+            <p class="goal">목표: 300명이 7일 동안 플로깅하기</p>
+            <div class="bar"><div class="fill green" style="width:42%"></div></div>
+            <p class="status">현재 참여자: <b>85명</b> (42%)</p>
+            <p class="reward">보상: 나이키 러닝 리워드, 플로깅키트 500명 추첨</p>
+          </div>
+          <div class="card-right">
+            <img src="./ploggingimg/01.png" alt="플로깅">
+          </div>
+        </article>
+      </a>
+
+      <!-- 카드 3 -->
+      <a href="./exp-detail-fork.html" class="experience-card-link">
+        <article class="experience-card" id="EXPERIENCEcard03">
+          <div class="card-left">
+            <h3>수저포크 안주셔도돼요 #배달의민족</h3>
+            <p class="goal">목표: 500명이 10일 동안 일회용 수저포크 안받기</p>
+            <div class="bar"><div class="fill lime" style="width:26%"></div></div>
+            <p class="status">현재 참여자: <b>128명</b> (25.6%)</p>
+            <p class="reward">보상: 배달의 민족 쿠폰, 무라벨 생수 300명 추첨</p>
+          </div>
+          <div class="card-right">
+            <img src="./forkimg/07.png" alt="수저포크">
+          </div>
+        </article>
+      </a>
+
+      <!-- 카드 4 -->
+      <a href="./exp-detail-reuse.html" class="experience-card-link">
+        <article class="experience-card" id="EXPERIENCEcard04">
+          <div class="card-left">
+            <h3>다회용기 포장해서 일회용품 안쓰기 #쿠팡이츠</h3>
+            <p class="goal">목표: 5000명이 7일 동안 다회용기로 포장하기</p>
+            <div class="bar"><div class="fill lime" style="width:34%"></div></div>
+            <p class="status">현재 참여자: <b>207명</b> (34%)</p>
+            <p class="reward">보상: 쿠팡이츠 할인쿠폰, 다회용기 400명 추첨</p>
+          </div>
+          <div class="card-right">
+            <img src="./reuseimg/05.png" alt="다회용기">
+          </div>
+        </article>
+      </a>
+
+      <!-- 카드 5 -->
+      <a href="./exp-detail-bus.html" class="experience-card-link">
+        <article class="experience-card" id="EXPERIENCEcard05">
+          <div class="card-left">
+            <h3>서울시 3일동안 대중교통 이용하고 포인트받아요</h3>
+            <p class="goal">목표: 1000명이 3일 동안 대중교통 이용하기</p>
+            <div class="bar"><div class="fill lime" style="width:53%"></div></div>
+            <p class="status">현재 참여자: <b>523명</b> (53%)</p>
+            <p class="reward">보상: 서울교통공사 포인트, 친환경보증금 500명 지급</p>
+          </div>
+          <div class="card-right">
+            <img src="./busimg/10.png" alt="버스">
+          </div>
+        </article>
+      </a>
+
+    </div>
+  </section>
+</main>
+
+
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-col brand-col">
+      <div class="brand">
+        <img src="./assets/logo.png" alt="RIPPLE 로고" class="ripple-logo-footer"> 
+      </div>
+      <p class="brand-sub">더 나은 세상을 위한 제안</p>
+      <div class="socials">
+        <a class="social" href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+        <a class="social" href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+        <a class="social" href="#" aria-label="X"><i class="ri-twitter-x-line"></i></a>
+        <a class="social" href="#" aria-label="Email"><i class="ri-mail-line"></i></a>
+      </div>
+      <p class="legal">© 2025 RIPPLE. All rights reserved. contact@rpl.app</p>
+    </div>
+
+ <!-- 오른쪽: 메뉴 -->
+    <div class="footer-right">
+      <ul class="links-list">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#guide">GUIDE</a></li>
+        <li><a href="#experience">EXPERIENCE</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
